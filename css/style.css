@@ -1,0 +1,67 @@
+/* css/style.css */
+
+:root { 
+    --primary-color: #333; 
+    --accent-color: #007bff; 
+}
+
+body { 
+    font-family: 'Noto Sans TC', sans-serif; 
+    color: #333; 
+    line-height: 1.6; 
+}
+
+/* 導覽列優化 */
+.navbar { 
+    background-color: rgba(255,255,255,0.95); 
+    backdrop-filter: blur(5px); 
+}
+
+.dropdown-menu { 
+    border: none; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+}
+
+/* 首頁區塊樣式 */
+section { 
+    padding: 100px 0; 
+}
+
+.hero-section { 
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
+    padding: 150px 0 100px; 
+}
+
+/* 作品入口卡片 */
+.category-card { 
+    border: none; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.category-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+}
+
+.category-card img { 
+    height: 250px; 
+    object-fit: cover; 
+}
+
+/* 頁尾 */
+footer { 
+    background: #222; 
+    color: #ccc; 
+}
+
+/* 加在 style.css 最後面：讓電腦版選單滑鼠移入即展開 */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; 
+    }
+}

@@ -32,6 +32,22 @@ section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
     padding: 150px 0 100px; 
 }
+.hero-section2 { 
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
+    padding: 80px 0 50px; 
+}
+
+/*內頁排版*/
+.container_2 { 
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-top: 0;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
 
 /* 作品入口卡片 */
 .category-card { 

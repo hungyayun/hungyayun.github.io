@@ -1,83 +1,40 @@
 /* css/style.css */
+/* 此檔案保留少數舊版樣式，大部分已移至 custom.css 及各頁專屬 CSS */
 
-:root { 
-    --primary-color: #333; 
-    --accent-color: #007bff; 
-}
-
-body { 
-    font-family: 'Noto Sans TC', sans-serif; 
-    color: #333; 
-    line-height: 1.6; 
-}
-
-/* 導覽列優化 */
-.navbar { 
-    background-color: rgba(255,255,255,0.95); 
-    backdrop-filter: blur(5px); 
-}
-
-.dropdown-menu { 
-    border: none; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-    border-radius: 8px; 
-}
-
-/* 首頁區塊樣式 */
-section { 
-    padding: 100px 0; 
-}
-
-.hero-section { 
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
-    padding: 150px 0 100px; 
-}
-.hero-section2 { 
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
-    padding: 80px 0 50px; 
-}
-
-/*內頁排版*/
-.container_2 { 
+/* 內頁排版用容器（部分內頁仍在使用） */
+.container_2 {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
-    padding-top: 0;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-right: auto;
     margin-left: auto;
 }
 
-/* 作品入口卡片 */
-.category-card { 
-    border: none; 
-    border-radius: 15px; 
-    overflow: hidden; 
+/* 尚未改版的內頁 hero（hero-section2）暫時保留 */
+.hero-section2 {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0 50px;
+}
+
+/* 尚未改版的作品卡片（category-card）暫時保留 */
+.category-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #fff;
 }
-
-.category-card:hover { 
-    transform: translateY(-10px); 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+.category-card img {
+    height: 250px;
+    object-fit: cover;
 }
 
-.category-card img { 
-    height: 250px; 
-    object-fit: cover; 
-}
-
-/* 頁尾 */
-footer { 
-    background: #222; 
-    color: #ccc; 
-}
-
-/* 加在 style.css 最後面：讓電腦版選單滑鼠移入即展開 */
-@media (min-width: 992px) {
-    .nav-item.dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0; 
-    }
-}
+/* 背景色 class（部分舊版內頁仍在使用） */
+.bg-custom-gray { background-color: #f0f2f5 !important; }
+.bg-pm-zone { background-color: #eef2f7 !important; }

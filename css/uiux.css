@@ -1,0 +1,59 @@
+/* ============================================================
+   uiux.css — Web & APP UI 索引頁專用樣式
+   ============================================================ */
+
+/* ── Page Hero ── */
+.page-hero {
+    padding-top: var(--nav-h);
+    background: var(--bg-white);
+    width: 100%;
+}
+.page-hero-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 64px 80px 48px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+/* ── Content ── */
+.content-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 72px 80px;
+}
+
+/* 群組區塊 */
+.works-group { margin-bottom: 72px; }
+
+/* Grid 3欄 */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Grid 2欄，第一張佔兩欄 */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.grid-2 .work-card:first-child {
+    grid-column: span 2;
+}
+.grid-2 .work-card:first-child .work-thumb {
+    aspect-ratio: 16/7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .page-hero-inner { padding: 48px 32px 40px; }
+    .content-wrap { padding: 48px 32px; }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .grid-2 { grid-template-columns: 1fr; }
+    .grid-2 .work-card:first-child { grid-column: span 1; }
+    .grid-2 .work-card:first-child .work-thumb { aspect-ratio: 3/2; }
+}
+@media (max-width: 600px) {
+    .grid-3 { grid-template-columns: 1fr; }
+}

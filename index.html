@@ -7,52 +7,50 @@
     <title>被當 PM 的設計人 | Hung Ya Yun Portfolio</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">被當 PM 用的設計人</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">被當 <span class="pm-highlight">PM</span> 用的設計人</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">主頁</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="experience.html">專案經歷</a></li>
-
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">主頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="experience.html">專案經歷</a>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="commercial.html" id="busDropdown" role="button"
-                            data-bs-toggle="dropdown">商業設計</a>
+                        <a class="nav-link dropdown-toggle" href="commercial.html" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            商業設計<span class="arrow">▾</span>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="commercial_plum-wine.html">梅酒酒標設計</a></li>
                             <li><a class="dropdown-item" href="commercial_packaging.html">公司紙箱提袋設計</a></li>
                         </ul>
                     </li>
-
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="uiux.html" id="uiuxDropdown" role="button"
-                            data-bs-toggle="dropdown">Web & APP UI 設計</a>
-                        <ul class="dropdown-menu shadow">
-                            <li>
-                                <h6 class="dropdown-header">App 再設計</h6>
-                            </li>
+                        <a class="nav-link dropdown-toggle" href="uiux.html" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            Web &amp; APP UI<span class="arrow">▾</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><h6 class="dropdown-header">App 再設計</h6></li>
                             <li><a class="dropdown-item" href="uiux_bus-app.html">台北市公車</a></li>
                             <li><a class="dropdown-item" href="uiux_cht-app.html">中華電信預付卡</a></li>
                             <li><a class="dropdown-item" href="uiux_mos-app.html">摩斯漢堡</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <h6 class="dropdown-header">網頁 / 專案設計</h6>
-                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">網頁 / 專案設計</h6></li>
                             <li><a class="dropdown-item" href="uiux_shuchao-app.html">書巢 (App)</a></li>
                             <li><a class="dropdown-item" href="uiux_radio-blog.html">廣播部落格</a></li>
                             <li><a class="dropdown-item" href="uiux_qingshui-web.html">清水散策 (Web)</a></li>
@@ -61,194 +59,230 @@
                             <li><a class="dropdown-item" href="uiux_english-web.html">美語網站</a></li>
                         </ul>
                     </li>
-
                     <li class="nav-item"><a class="nav-link" href="exhibition.html">展場設計</a></li>
                     <li class="nav-item"><a class="nav-link" href="graphic.html">平面設計</a></li>
                     <li class="nav-item"><a class="nav-link" href="illustration.html">插圖</a></li>
                 </ul>
-            </div>
         </div>
     </nav>
 
-    <header class="hero-section">
-        <div class="container text-center" data-aos="fade-up">
-            <h1 class="display-4 fw-bold mb-3">你好，我是 Hung Ya Yun 洪雅韻</h1>
-            <p class="lead mb-4">一個被老闆當作 PM 使用的設計人。</p>
-            <a href="#portfolio-entrance" class="btn btn-dark btn-lg px-4">查看我的作品</a>
-        </div>
-    </header>
-
-    <section id="about" class="container">
-        <div class="row align-items-center">
-            <div class="col-md-5" data-aos="fade-right">
-                <img src="images/photo.jpg" class="img-fluid rounded-4 shadow" alt="個人照" style="margin-bottom: 1.5em;">
-            </div>
-            <div class="col-md-7 ps-md-5" data-aos="fade-left">
-                <h2 class="fw-bold mb-4">關於我 / About Me</h2>
-                <p>除了本業設計之外也需要協助公司規劃網站更新內容後與工程師們溝通協調網站的更新需求，並追蹤工程師們更新進度。</p>
-                <p>擅長平面設計／網頁設計／介面設計／產品拍攝／插畫</p>
-
-                <div class="row mt-4">
-                    <div class="col-6 col-sm-4 mb-3">
-                        <h6 class="fw-bold">UI/Web Design</h6>
-                        <small class="text-muted">Figma, html, css, Bootstrap</small>
-                    </div>
-                    <div class="col-6 col-sm-4 mb-3">
-                        <h6 class="fw-bold">Visual Design</h6>
-                        <small class="text-muted">Ai, Ps, Ae</small>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <h4>學歷</h4>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" style="border: none;">2011-2015 銘傳大學 數位媒體設計系</li>
-                </div>
-                <div class="row mt-4">
-                    <h4>工作經歷</h4>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" style="border: none;">2021 Wine&Taste(品迷網)  設計師</li>
-                        <li class="list-group-item" style="border: none;">2019 科見Online(科見美語)  網路美編/網頁設計</li>
-                        <li class="list-group-item" style="border: none;">2019 露比午茶  視覺設計</li>
-                        <li class="list-group-item" style="border: none;">​2017 金緻品  行銷美編</li>
-                        <li class="list-group-item" style="border: none;">2015 醫碩科技  平面美工</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    </section>
-
-    <section id="pm-experience" class="bg-light">
-        <div class="container py-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 mb-2">PM & UX Strategy</span>
-                <h2 class="fw-bold text-dark">專案經歷與流程優化亮點</h2>
-                <p class="text-muted mx-auto" style="max-width: 600px;">
-                    除了視覺設計，我更擅長觀察痛點、規劃邏輯，並透過自動化解決方案提升團隊營運效能。
-                </p>
-            </div>
-
-            <div class="row g-4 justify-content-center mb-5">
-                <div class="col-md-5 col-lg-4" data-aos="fade-up">
-                    <div class="card h-100 border-0 shadow-sm p-3">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center me-3"
-                                    style="width: 60px; height: 60px; min-width: 60px;">
-                                    <i class="bi bi-line fs-4"></i>
-                                </div>
-                                <h5 class="fw-bold mb-0">LINE 會員綁定<br>與自動化通知</h5>
-                            </div>
-                            <p class="small text-secondary mb-0">
-                                策劃官網與 LINE 帳號綁定流程，實現訂單狀態自動化推送，顯著降低客服人力成本。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-5 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card h-100 border-0 shadow-sm p-3">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center me-3"
-                                    style="width: 60px; height: 60px; min-width: 60px;">
-                                    <i class="bi bi-cpu fs-4"></i>
-                                </div>
-                                <h5 class="fw-bold mb-0">活動行銷外框<br>自動化系統</h5>
-                            </div>
-                            <p class="small text-secondary mb-0">
-                                將繁瑣的人工逐一製圖，改為後台模組化一鍵套用，縮短 90% 以上的行銷活動準備時間。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="text-center" data-aos="fade-up">
-                <a href="experience.html" class="btn btn-outline-dark btn-lg px-5 rounded-pill shadow-sm">
-                    查看完整 PM 優化紀錄 <i class="bi bi-arrow-right ms-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio-entrance" class="bg-custom-gray">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-5">專業領域 / Domains</h2>
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="zoom-in">
-                    <div class="card category-card">
-                        <img src="images/business/umeshu/umeshu_001.jpg" class="card-img-top" alt="商業設計">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">商業設計</h5>
-                            <p class="card-text text-muted small">酒標設計、包裝提袋規劃</p>
-                            <a href="commercial.html" class="btn btn-outline-dark w-100">查看分類</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="card category-card">
-                        <img src="images/uiux/shuchao/SHUCHAO-BOOKSHELF.jpg" class="card-img-top" alt="UIUX">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Web & APP UI</h5>
-                            <p class="card-text text-muted small">App 再設計與響應式網頁</p>
-                            <a href="uiux.html" class="btn btn-outline-dark w-100">查看分類</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card category-card">
-                        <img src="images/exhibition/exhibition_003.jpg" class="card-img-top" alt="展場設計">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">展場設計</h5>
-                            <p class="card-text text-muted small">2021 台北國際書展展場設計</p>
-                            <a href="exhibition.html" class="btn btn-outline-dark w-100">查看分類</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card category-card">
-                        <img src="images/graphic/autumn-picnic_banner.webp" class="card-img-top" alt="平面設計">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">平面設計</h5>
-                            <p class="card-text text-muted small">過去工作之Banner、FB圖文、產品攝影、EDM及印刷品設計。</p>
-                            <a href="graphic.html" class="btn btn-outline-dark w-100">查看分類</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card category-card">
-                        <img src="images/illustration/ruby_002.jpg" class="card-img-top" alt="插畫作品">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">插畫作品</h5>
-                            <p class="card-text text-muted small">除部分作品外，皆非商業作品，屬於個人興趣之創作。</p>
-                            <a href="illustration.html" class="btn btn-outline-dark w-100">查看分類</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-5">
-        <div class="container text-center">
-            <h3 class="fw-bold mb-3 text-white">Let's Connect</h3>
-            <p>如果你對我的作品感興趣，歡迎透過 Email 聯繫我</br>
-                <a href="mailto:origisig@gmail.com" class="text-white text-decoration-none">
-                    origisig@gmail.com
-                </a>
+    <!-- HERO -->
+    <div class="hero-bg">
+    <section class="hero">
+        <div class="hero-content reveal">
+            <div class="hero-eyebrow">UI/UX Designer · Taipei</div>
+            <h1 class="hero-title">Hung Ya Yun</h1>
+            <p class="hero-title-zh">洪　雅　韻</p>
+            <p class="hero-desc">
+                一個被老闆當作 <strong>PM</strong> 使用的設計人。<br>
+                擅長設計，也懂得規劃邏輯、溝通協調——<br>
+                用設計師的眼睛，解決商業問題。
             </p>
-            <p class="small text-secondary">© 2026 Hung Ya Yun. Built with Bootstrap 5.</p>
+            <a href="#portfolio-entrance" class="btn-orange">
+                查看我的作品
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
+        <div class="hero-image-col">
+            <div class="hero-image-frame reveal">
+                <img src="images/photo.jpg" alt="Hung Ya Yun" />
+                <div class="hero-tag">Designer × PM</div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="about-inner">
+        <div class="about-left reveal">
+            <div class="section-label">About Me</div>
+            <h2>設計思維，<br/><em>PM 執行力</em></h2>
+            <p>除了本業設計之外，也負責協助公司規劃網站更新內容、與工程師們溝通協調需求並追蹤進度。擅長觀察痛點、規劃邏輯，用設計解決商業問題。</p>
+            <div class="skill-rows">
+                <div>
+                    <span class="skill-row-label">UI / Web Design</span>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                    </div>
+                </div>
+                <div>
+                    <span class="skill-row-label">Visual Design</span>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Illustrator</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">After Effects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-right reveal">
+            <p class="timeline-title">工作經歷</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-role">設計師</div>
+                    <div class="timeline-company">Wine&amp;Taste（品迷網）</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-role">網路美編 / 網頁設計</div>
+                    <div class="timeline-company">科見Online（科見美語）</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-role">視覺設計</div>
+                    <div class="timeline-company">露比午茶</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2017</div>
+                    <div class="timeline-role">行銷美編</div>
+                    <div class="timeline-company">金緻品</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-role">平面美工</div>
+                    <div class="timeline-company">醫碩科技</div>
+                </div>
+            </div>
+
+            <p class="timeline-title">學歷</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2011 — 2015</div>
+                    <div class="timeline-role">數位媒體設計系</div>
+                    <div class="timeline-company">銘傳大學</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- PM -->
+    <section class="pm-section" id="pm-experience">
+        <div class="pm-inner">
+        <div class="pm-header reveal">
+            <h2>專案經歷與<br/><em>流程優化</em>亮點</h2>
+            <p>除了視覺設計，我更擅長觀察痛點、規劃邏輯，並透過自動化解決方案提升團隊營運效能。</p>
+        </div>
+        <div class="pm-cards">
+            <div class="pm-card reveal">
+                <div class="pm-card-icon">💬</div>
+                <h3>LINE 會員綁定與自動化通知</h3>
+                <p>策劃官網與 LINE 帳號綁定流程，實現訂單狀態自動化推送，顯著降低客服人力成本。</p>
+            </div>
+            <div class="pm-card reveal">
+                <div class="pm-card-icon">⚡</div>
+                <h3>活動行銷外框自動化系統</h3>
+                <p>將繁瑣的人工逐一製圖，改為後台模組化一鍵套用，縮短 90% 以上的行銷活動準備時間。</p>
+            </div>
+        </div>
+        <div class="text-center reveal">
+            <a href="experience.html" class="btn-orange">查看完整 PM 優化紀錄 →</a>
+        </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio-section" id="portfolio-entrance">
+        <div class="portfolio-inner">
+        <div class="portfolio-header reveal">
+            <h2>專業領域</h2>
+            <span>Domains</span>
+        </div>
+        <div class="portfolio-grid">
+            <a href="uiux.html" class="work-card reveal">
+                <div class="work-thumb">
+                    <img src="images/uiux/shuchao/SHUCHAO-BOOKSHELF.jpg" alt="Web & APP UI">
+                    <div class="work-overlay"><div class="work-overlay-btn">查看分類 →</div></div>
+                </div>
+                <div class="work-info">
+                    <div class="work-type">Web &amp; APP UI</div>
+                    <div class="work-title">App 再設計與響應式網頁</div>
+                </div>
+            </a>
+            <a href="commercial.html" class="work-card reveal">
+                <div class="work-thumb">
+                    <img src="images/business/umeshu/umeshu_001.jpg" alt="商業設計">
+                    <div class="work-overlay"><div class="work-overlay-btn">查看分類 →</div></div>
+                </div>
+                <div class="work-info">
+                    <div class="work-type">商業設計</div>
+                    <div class="work-title">酒標設計・包裝提袋規劃</div>
+                </div>
+            </a>
+            <a href="exhibition.html" class="work-card reveal">
+                <div class="work-thumb">
+                    <img src="images/exhibition/exhibition_003.jpg" alt="展場設計">
+                    <div class="work-overlay"><div class="work-overlay-btn">查看分類 →</div></div>
+                </div>
+                <div class="work-info">
+                    <div class="work-type">展場設計</div>
+                    <div class="work-title">2021 台北國際書展</div>
+                </div>
+            </a>
+            <a href="graphic.html" class="work-card reveal">
+                <div class="work-thumb">
+                    <img src="images/graphic/autumn-picnic_banner.webp" alt="平面設計">
+                    <div class="work-overlay"><div class="work-overlay-btn">查看分類 →</div></div>
+                </div>
+                <div class="work-info">
+                    <div class="work-type">平面設計</div>
+                    <div class="work-title">Banner・EDM・產品攝影</div>
+                </div>
+            </a>
+            <a href="illustration.html" class="work-card reveal">
+                <div class="work-thumb">
+                    <img src="images/illustration/ruby_002.jpg" alt="插畫作品">
+                    <div class="work-overlay"><div class="work-overlay-btn">查看分類 →</div></div>
+                </div>
+                <div class="work-info">
+                    <div class="work-type">插畫</div>
+                    <div class="work-title">個人插畫創作</div>
+                </div>
+            </a>
+        </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section">
+        <div class="section-label center">Contact</div>
+        <h2 class="contact-title">歡迎<em>聯繫我</em></h2>
+        <p class="contact-sub">如果你對我的作品感興趣，歡迎透過 Email 聯繫</p>
+        <a href="mailto:origisig@gmail.com" class="contact-email">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <rect x="1" y="3" width="14" height="10" rx="1.5" stroke="#888" stroke-width="1.2"/>
+                <path d="M1.5 3.5l6.5 5 6.5-5" stroke="#888" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            origisig@gmail.com
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-logo">被當 <span class="pm-highlight">PM</span> 用的設計人</div>
+        <p class="footer-copy">© 2026 Hung Ya Yun. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 

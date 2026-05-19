@@ -4,188 +4,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APP 再設計 - 中華電信預付卡 | Hung Ya Yun Portfolio</title>
+    <title>中華電信預付卡 App 再設計｜Hung Ya Yun Portfolio</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/work.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">被當 PM 用的設計人</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+        <img id="lightbox-img" src="" alt="" />
+    </div>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">主頁</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="experience.html">專案經歷</a></li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="commercial.html" id="busDropdown" role="button"
-                            data-bs-toggle="dropdown">商業設計</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="commercial_plum-wine.html">梅酒酒標設計</a></li>
-                            <li><a class="dropdown-item" href="commercial_packaging.html">公司紙箱提袋設計</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="uiux.html" id="uiuxDropdown" role="button"
-                            data-bs-toggle="dropdown">Web & APP UI 設計</a>
-                        <ul class="dropdown-menu shadow">
-                            <li>
-                                <h6 class="dropdown-header">App 再設計</h6>
-                            </li>
-                            <li><a class="dropdown-item" href="uiux_bus-app.html">台北市公車</a></li>
-                            <li><a class="dropdown-item" href="uiux_cht-app.html">中華電信預付卡</a></li>
-                            <li><a class="dropdown-item" href="uiux_mos-app.html">摩斯漢堡</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <h6 class="dropdown-header">網頁 / 專案設計</h6>
-                            </li>
-                            <li><a class="dropdown-item" href="uiux_shuchao-app.html">書巢 (App)</a></li>
-                            <li><a class="dropdown-item" href="uiux_radio-blog.html">廣播部落格</a></li>
-                            <li><a class="dropdown-item" href="uiux_qingshui-web.html">清水散策 (Web)</a></li>
-                            <li><a class="dropdown-item" href="uiux_qingshui-app.html">清水散策 (App)</a></li>
-                            <li><a class="dropdown-item" href="uiux_english-camp.html">美語夏令營</a></li>
-                            <li><a class="dropdown-item" href="uiux_english-web.html">美語網站</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item"><a class="nav-link" href="exhibition.html">展場設計</a></li>
-                    <li class="nav-item"><a class="nav-link" href="graphic.html">平面設計</a></li>
-                    <li class="nav-item"><a class="nav-link" href="illustration.html">插圖</a></li>
-                </ul>
-            </div>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">被當 <span class="pm-highlight">PM</span> 用的設計人</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">主頁</a></li>
+                <li class="nav-item"><a class="nav-link" href="experience.html">專案經歷</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="commercial.html" data-bs-toggle="dropdown" aria-expanded="false">
+                        商業設計<span class="arrow">▾</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="commercial_plum-wine.html">梅酒酒標設計</a></li>
+                        <li><a class="dropdown-item" href="commercial_packaging.html">公司紙箱提袋設計</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="uiux.html" data-bs-toggle="dropdown" aria-expanded="false">
+                        Web &amp; APP UI<span class="arrow">▾</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><h6 class="dropdown-header">App 再設計</h6></li>
+                        <li><a class="dropdown-item" href="uiux_bus-app.html">台北市公車</a></li>
+                        <li><a class="dropdown-item active" href="uiux_cht-app.html">中華電信預付卡</a></li>
+                        <li><a class="dropdown-item" href="uiux_mos-app.html">摩斯漢堡</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">網頁 / 專案設計</h6></li>
+                        <li><a class="dropdown-item" href="uiux_shuchao-app.html">書巢 (App)</a></li>
+                        <li><a class="dropdown-item" href="uiux_radio-blog.html">廣播部落格</a></li>
+                        <li><a class="dropdown-item" href="uiux_qingshui-web.html">清水散策 (Web)</a></li>
+                        <li><a class="dropdown-item" href="uiux_qingshui-app.html">清水散策 (App)</a></li>
+                        <li><a class="dropdown-item" href="uiux_english-camp.html">美語夏令營</a></li>
+                        <li><a class="dropdown-item" href="uiux_english-web.html">美語網站</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="exhibition.html">展場設計</a></li>
+                <li class="nav-item"><a class="nav-link" href="graphic.html">平面設計</a></li>
+                <li class="nav-item"><a class="nav-link" href="illustration.html">插圖</a></li>
+            </ul>
         </div>
     </nav>
 
-    <header class="hero-section2">
-        <div class="container text-center" data-aos="fade-up">
-            <h3 class="lead mb-4">APP UI Design</p>
-                <h2 class="display-4 fw-bold mb-3">APP 再設計 - 中華電信預付卡</h2>
-        </div>
-    </header>
-
-    <section class="container">
-        <p class="text-center">使用中華電信預付卡時有遇到一些使用上的不便，主要希望可以改善自己使用上不變的點。​</p>
-        <p class="text-center">以 figma 製作，可觀看 <a
-                href="https://www.figma.com/design/UMfnqSqic648rtCzPioJMq/%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%E8%A1%8C%E5%8B%95%E9%A0%90%E4%BB%98%E5%8D%A1?node-id=1-85&t=Cr52YpCYF55KZHRR-1">figma
-                製作檔</a> 及 <a
-                href="https://www.figma.com/proto/UMfnqSqic648rtCzPioJMq/%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%E8%A1%8C%E5%8B%95%E9%A0%90%E4%BB%98%E5%8D%A1?node-id=1-85&t=DAdsROhAISx8toU9-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=2063%3A813&show-proto-sidebar=1">prototype</a>
-        </p>
-        <section class="container">
-            <div class="row align-items-start">
-                <div class="col-md-4 mb-5" data-aos="fade-right">
-                    <h5 class="text-danger fw-bold">Original App</h5>
-                    <div class="card bg-light border-0">
-                        <div class="card-body px-0">
-                            <small class="text-muted">❌ 首頁無法直接看到目前帳號的餘額</small>
-                            <br>
-                            <small class="text-muted">❌ 網頁儲值時，必須離開 app 另外使用網頁瀏覽器操作。</small>
-                        </div>
-                        <img src="images/uiux/prepaidcards/original/IMG_3336.PNG"
-                            class="img-fluid rounded shadow-sm grayscale mb-4" alt="舊版截圖">
-                        <img src="images/uiux/prepaidcards/original/IMG_3353.PNG"
-                            class="img-fluid rounded shadow-sm grayscale mb-4" alt="舊版截圖">
-                        <img src="images/uiux/prepaidcards/original/IMG_3337.PNG"
-                            class="img-fluid rounded shadow-sm grayscale mb-4" alt="舊版截圖">
-                        <img src="images/uiux/prepaidcards/original/IMG_3338.PNG"
-                            class="img-fluid rounded shadow-sm grayscale mb-4" alt="舊版截圖">
-                        <img src="images/uiux/prepaidcards/original/IMG_3339.PNG"
-                            class="img-fluid rounded shadow-sm grayscale mb-4" alt="舊版截圖">
-                        <img src="images/uiux/prepaidcards/original/IMG_3341.PNG"
-                            class="img-fluid rounded shadow-sm grayscale mb-4" alt="舊版截圖">
-                        <img src="images/uiux/prepaidcards/original/IMG_3344.PNG"
-                            class="img-fluid rounded shadow-sm grayscale mb-4" alt="舊版截圖">
-                        <img src="images/uiux/prepaidcards/original/IMG_3352.PNG"
-                            class="img-fluid rounded shadow-sm grayscale mb-4" alt="舊版截圖">
-                        <img src="images/uiux/prepaidcards/original/IMG_3349.PNG"
-                            class="img-fluid rounded shadow-sm grayscale mb-4" alt="舊版截圖">
-                        <img src="images/uiux/prepaidcards/original/IMG_3351.PNG"
-                            class="img-fluid rounded shadow-sm grayscale mb-4" alt="舊版截圖">
-                    </div>
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <div>
+                <div class="page-breadcrumb">
+                    <a href="uiux.html">Web &amp; APP UI</a>
+                    <span class="sep">/</span>
+                    App 再設計
                 </div>
+                <div class="page-eyebrow">App UI Design</div>
+                <h1 class="page-title">中華電信預付卡<br/><em>App 再設計</em></h1>
+                <p class="page-desc">使用中華電信預付卡時有遇到一些使用上的不便，主要希望可以改善自己使用上不便的點。</p>
+            </div>
+            <div class="hero-links">
+                <a href="https://www.figma.com/design/UMfnqSqic648rtCzPioJMq/" target="_blank" class="hero-link">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <rect x="1" y="1" width="6" height="6" rx="1" fill="#F24E1E"/>
+                        <rect x="9" y="1" width="6" height="6" rx="1" fill="#FF7262"/>
+                        <rect x="1" y="9" width="6" height="6" rx="1" fill="#0ACF83"/>
+                        <circle cx="12" cy="12" r="3" fill="#1ABCFE"/>
+                    </svg>
+                    Figma 製作檔
+                </a>
+                <a href="https://www.figma.com/proto/UMfnqSqic648rtCzPioJMq/" target="_blank" class="hero-link">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="6.5" stroke="#f78546" stroke-width="1.2"/>
+                        <path d="M6 5.5l4 2.5-4 2.5V5.5z" fill="#f78546"/>
+                    </svg>
+                    Prototype
+                </a>
+            </div>
+        </div>
+    </div>
 
-                <div class="col-md-8" data-aos="fade-left">
-                    <h5 class="text-success fw-bold">Redesign & New Features</h5>
-                    <div class="row g-3">
-                        <div class="col-12 mt-3">
-                            <div class="p-3 bg-white rounded border-start border-success border-4 shadow-sm">
-                                <h6>核心優化：視覺化狀態追蹤與無縫儲值流程</h6>
-                                <ul>
-                                    <li class="small text-muted mb-0">首頁新增帳號餘額等資訊</li>
-                                    <li class="small text-muted mb-0">網頁儲值功能希望不要跳到外部瀏覽器</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6"><img src="images/uiux/prepaidcards/redesign/index.jpg"
-                                class="img-fluid rounded shadow" alt="新版主頁"></div>
-                        <div class="col-12 col-md-6"><img src="images/uiux/prepaidcards/redesign/sidebar_index.jpg"
-                                class="img-fluid rounded shadow" alt="主頁側邊欄"></div>
-                        <div class="col-12 col-md-6"><img src="images/uiux/prepaidcards/redesign/login.jpg"
-                                class="img-fluid rounded shadow" alt="登入"></div>
-                        <div class="col-12 col-md-6"><img src="images/uiux/prepaidcards/redesign/index_notloggedin.jpg"
-                                class="img-fluid rounded shadow" alt="首頁未登入"></div>
-                        <div class="col-12 col-md-6"><img
-                                src="images/uiux/prepaidcards/redesign/sidebar_index_notloggedin.jpg"
-                                class="img-fluid rounded shadow" alt="首頁未登入側邊欄"></div>
-                        <div class="col-12 col-md-6"><img
-                                src="images/uiux/prepaidcards/redesign/prepaid_card_stored_value.jpg"
-                                class="img-fluid rounded shadow" alt="預付卡儲值"></div>
-                        <div class="col-12 col-md-6"><img
-                                src="images/uiux/prepaidcards/redesign/prepaid_card_stored_value_list.jpg"
-                                class="img-fluid rounded shadow" alt="預付卡儲值清單"></div>
-                        <div class="col-12 col-md-6"><img
-                                src="images/uiux/prepaidcards/redesign/mainaccount_stored_value.jpg"
-                                class="img-fluid rounded shadow" alt="主帳儲值"></div>
-                        <div class="col-12 col-md-6"><img
-                                src="images/uiux/prepaidcards/redesign/mainaccount_buylist.jpg"
-                                class="img-fluid rounded shadow" alt="主帳儲值清單"></div>
-                        <div class="col-12 col-md-6"><img src="images/uiux/prepaidcards/redesign/e_stored_value.jpg"
-                                class="img-fluid rounded shadow" alt="e儲值"></div>
-                        <div class="col-12 col-md-6"><img src="images/uiux/prepaidcards/redesign/5G.jpg"
-                                class="img-fluid rounded shadow" alt="升級5g"></div>
-                        <div class="col-12 col-md-6"><img src="images/uiux/prepaidcards/redesign/notifications.jpg"
-                                class="img-fluid rounded shadow" alt="通知"></div>
-                        <div class="col-12 col-md-6"><img src="images/uiux/prepaidcards/redesign/setting.jpg"
-                                class="img-fluid rounded shadow" alt="設定"></div>
-                        <div class="col-12 col-md-6"><img
-                                src="images/uiux/prepaidcards/redesign/sidebar_customer_service.jpg"
-                                class="img-fluid rounded shadow" alt="客服"></div>
-                    </div>
+    <!-- CONTENT -->
+    <div class="content-wrap">
+
+        <!-- Original -->
+        <div class="work-section reveal">
+            <div class="section-label">Original App</div>
+            <h2 class="section-title">原版問題分析</h2>
+            <div class="block-card">
+                <ul class="problem-list">
+                    <li><span>❌</span>首頁無法直接看到目前帳號的餘額</li>
+                    <li><span>❌</span>網頁儲值時，必須離開 App 另外使用網頁瀏覽器操作</li>
+                </ul>
+                <div class="screenshot-scroll">
+                    <div class="screenshot-item"><img src="images/uiux/prepaidcards/original/IMG_3336.PNG" alt="原版截圖" /></div>
+                    <div class="screenshot-item"><img src="images/uiux/prepaidcards/original/IMG_3353.PNG" alt="原版截圖" /></div>
+                    <div class="screenshot-item"><img src="images/uiux/prepaidcards/original/IMG_3337.PNG" alt="原版截圖" /></div>
+                    <div class="screenshot-item"><img src="images/uiux/prepaidcards/original/IMG_3338.PNG" alt="原版截圖" /></div>
+                    <div class="screenshot-item"><img src="images/uiux/prepaidcards/original/IMG_3339.PNG" alt="原版截圖" /></div>
+                    <div class="screenshot-item"><img src="images/uiux/prepaidcards/original/IMG_3341.PNG" alt="原版截圖" /></div>
+                    <div class="screenshot-item"><img src="images/uiux/prepaidcards/original/IMG_3344.PNG" alt="原版截圖" /></div>
+                    <div class="screenshot-item"><img src="images/uiux/prepaidcards/original/IMG_3352.PNG" alt="原版截圖" /></div>
+                    <div class="screenshot-item"><img src="images/uiux/prepaidcards/original/IMG_3349.PNG" alt="原版截圖" /></div>
+                    <div class="screenshot-item"><img src="images/uiux/prepaidcards/original/IMG_3351.PNG" alt="原版截圖" /></div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Redesign -->
+        <div class="work-section reveal">
+            <div class="section-label">Redesign & New Features</div>
+            <h2 class="section-title">核心優化：視覺化狀態追蹤與無縫儲值流程</h2>
+
+            <div class="feature-block reveal">
+                <div class="feature-header">
+                    <span class="feature-num">01</span>
+                    <span class="feature-title">首頁新增帳號餘額與狀態資訊</span>
+                    <div class="feature-line"></div>
+                </div>
+                <div class="img-grid phone-grid">
+                    <img src="images/uiux/prepaidcards/redesign/index.jpg" alt="新版主頁" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/sidebar_index.jpg" alt="主頁側邊欄" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/login.jpg" alt="登入" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/index_notloggedin.jpg" alt="首頁未登入" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/sidebar_index_notloggedin.jpg" alt="首頁未登入側邊欄" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/notifications.jpg" alt="通知" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/setting.jpg" alt="設定" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/sidebar_customer_service.jpg" alt="客服" onclick="openLightbox(this)" />
+                </div>
+            </div>
+
+            <div class="feature-block reveal">
+                <div class="feature-header">
+                    <span class="feature-num">02</span>
+                    <span class="feature-title">App 內建儲值流程，不跳轉外部瀏覽器</span>
+                    <div class="feature-line"></div>
+                </div>
+                <div class="img-grid phone-grid">
+                    <img src="images/uiux/prepaidcards/redesign/prepaid_card_stored_value.jpg" alt="預付卡儲值" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/prepaid_card_stored_value_list.jpg" alt="預付卡儲值清單" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/mainaccount_stored_value.jpg" alt="主帳儲值" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/mainaccount_buylist.jpg" alt="主帳儲值清單" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/e_stored_value.jpg" alt="e儲值" onclick="openLightbox(this)" />
+                    <img src="images/uiux/prepaidcards/redesign/5G.jpg" alt="升級5G" onclick="openLightbox(this)" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 前後作品導覽 -->
+    <div class="work-nav reveal">
+        <a href="uiux_bus-app.html" class="work-nav-item prev">
+            <div class="work-nav-dir">← 上一個作品</div>
+            <div class="work-nav-title">台北市公車 App 再設計</div>
+        </a>
+        <a href="uiux_mos-app.html" class="work-nav-item next">
+            <div class="work-nav-dir">下一個作品 →</div>
+            <div class="work-nav-title">摩斯漢堡 App 再設計</div>
+        </a>
+    </div>
+
+    <!-- CONTACT -->
+    <section class="contact-section">
+        <div class="section-label center">Contact</div>
+        <h2 class="contact-title">歡迎<em>聯繫我</em></h2>
+        <p class="contact-sub">如果你對我的作品感興趣，歡迎透過 Email 聯繫</p>
+        <a href="mailto:origisig@gmail.com" class="contact-email">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <rect x="1" y="3" width="14" height="10" rx="1.5" stroke="#888" stroke-width="1.2"/>
+                <path d="M1.5 3.5l6.5 5 6.5-5" stroke="#888" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            origisig@gmail.com
+        </a>
     </section>
 
-
-    <footer class="py-5">
-        <div class="container text-center">
-            <h3 class="fw-bold mb-3 text-white">Let's Connect</h3>
-            <p>如果你對我的作品感興趣，歡迎透過 Email 聯繫我</br>
-                <a href="mailto:origisig@gmail.com" class="text-white text-decoration-none">
-                    origisig@gmail.com
-                </a>
-            </p>
-            <p class="small text-secondary">© 2026 Hung Ya Yun. Built with Bootstrap 5.</p>
-        </div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-logo">被當 <span class="pm-highlight">PM</span> 用的設計人</div>
+        <p class="footer-copy">© 2026 Hung Ya Yun. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        function openLightbox(img) {
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
     </script>
 </body>
 
